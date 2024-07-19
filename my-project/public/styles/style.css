@@ -1,0 +1,415 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+
+nav {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.logo img {
+  width: 170px;
+  height: auto;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  margin-left: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+.menu ul li a:hover {
+  color: #ffcd3c;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero {
+  background: url("/images/images.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #ffcd3c;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  transition: background-color 0.4s;
+}
+
+.btn:hover {
+  background-color: #37b7c3;
+}
+
+
+.jumbotron {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.jumbotron h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.umkm-data {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+}
+
+.umkm-data h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  margin: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card .btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.contact-us {
+  background: linear-gradient(to right, #f8c291, #6a89cc); /* Gradien dari palet Color Hunt */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-us .wrapper {
+  background: rgba(0, 0, 0, 0.6); /* Menambahkan overlay gelap */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact-us h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8em;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.contact-us p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #e1e1e1;
+}
+
+.contact-us form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-us label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contact-us input, .contact-us textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact-us input:focus, .contact-us textarea:focus {
+  border-color: #ffcd3c;
+  outline: none;
+}
+
+.contact-us button {
+  background-color: #ffcd3c;
+  color: #333;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  transition: background-color 0.4s, transform 0.2s;
+}
+
+.contact-us button:hover {
+  background-color: #37b7c3;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+}
+
+footer ul li {
+  margin-left: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ffcd3c;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  .hero p {
+    font-size: 1.1em;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu ul {
+    flex-direction: column;
+  }
+  .menu ul li {
+    margin: 10px 0;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+}
+
+/* Handphone */
+@media (max-width: 480px) {
+  .wrapper {
+    justify-content: space-between; /* Posisikan hamburger di sebelah kanan */
+  }
+  .menu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    justify-content: flex-end; /* Posisikan hamburger di sebelah kanan */
+  }
+  .menu.active {
+    display: block;
+  }
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu ul li {
+    margin: 10px 0;
+  }
+  .hero h1 {
+    font-size: 1.5em;
+  }
+  .hero p {
+    font-size: 0.9em;
+  }
+  .btn {
+    padding: 8px 15px;
+    font-size: 1em;
+  }
+}

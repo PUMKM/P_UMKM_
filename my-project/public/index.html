@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partner UMKM</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><img src="/images/umkm.png" /></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#jumbotron">Berita</a></li>
+            <li><a href="legalitas.html">Legalitas</a></li>
+            <li><a href="branding-logo.html">Branding Logo</a></li>
+            <li>
+              <a href="/my-project/public/login.html" class="btn">Login</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero">
+      <div>
+        <h1>AYO JANGAN TAKUT UNTUK MEMULAI USAHA</h1>
+        <p>Cukup di Rumah Saja, Biarkan Uang Yang Bekerja Untuk Anda</p>
+        <button class="btn" id="btnKonsultasi">Konsultasi Sekarang</button>
+      </div>
+    </section>
+
+    <section id="jumbotron" class="jumbotron">
+      <div class="wrapper">
+        <h2>Selamat Datang di Partner UMKM</h2>
+        <p>
+          Kami siap membantu UMKM untuk tumbuh dan berkembang. Silahkan Tekan
+          Tombol di Bawah jika ingin menjadi pengusaha sukses. Ayo Tunggu Apa
+          Lagi, Mulailah Dari Sekarang.
+        </p>
+        <button class="btn" id="btnPelajari">Pelajari Lebih Lanjut</button>
+      </div>
+    </section>
+
+    <section id="umkm-data" class="umkm-data">
+      <div class="wrapper">
+        <h2>Data UMKM</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="/images/usaha1.jpg" alt="Usaha 1" />
+            <div class="card-content">
+              <h3>Usaha 1</h3>
+              <p>Deskripsi singkat tentang Usaha 1.</p>
+              <a href="/html/usaha1.html" class="btn">Lihat Profil</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/images/usaha2.jpg" alt="Usaha 2" />
+            <div class="card-content">
+              <h3>Usaha 2</h3>
+              <p>Deskripsi singkat tentang Usaha 2.</p>
+              <a href="/profiles/usaha2.html" class="btn">Lihat Profil</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/images/usaha3.jpg" alt="Usaha 3" />
+            <div class="card-content">
+              <h3>Usaha 3</h3>
+              <p>Deskripsi singkat tentang Usaha 3.</p>
+              <a href="/profiles/usaha3.html" class="btn">Lihat Profil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-us" class="contact-us">
+      <div class="wrapper">
+        <h2>Hubungi Kami</h2>
+        <p>
+          Kami senang mendengar dari Anda! Jika Anda memiliki pertanyaan, saran,
+          atau membutuhkan bantuan, silakan isi formulir di bawah ini dan tim
+          kami akan segera menghubungi Anda.
+        </p>
+        <form>
+          <div class="form-group">
+            <label for="name">Nama:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Masukkan nama Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Masukkan alamat email Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tulis pesan Anda di sini"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+      <p>&copy; 2024 Copyright by Dimas. All rights reserved.</p>
+    </footer>
+
+    <script src="/src/script.js"></script>
+    <script>
+      document
+        .getElementById("btnKonsultasi")
+        .addEventListener("click", function () {
+          window.location.href =
+            "https://api.whatsapp.com/send?phone=6282338524669";
+        });
+
+      document
+        .getElementById("btnPelajari")
+        .addEventListener("click", function () {
+          window.location.href = "../html/pendaftaran.html";
+        });
+    </script>
+  </body>
+</html>

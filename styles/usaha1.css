@@ -1,0 +1,43 @@
+/* Custom Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+main img {
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    color: #666;
+    border-left: 4px solid #4caf50;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+/* Custom Media Queries */
+@media (max-width: 1200px) {
+    header .navbar-brand img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 60px 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 50px 10px 20px;
+    }
+}

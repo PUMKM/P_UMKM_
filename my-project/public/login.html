@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sebagai Partner P UMKM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .gradient-custom-2 {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+    </style>
+</head>
+<body>
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <img src="/images/umkm.png"
+                                            style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1">P UMKM SOLUSI USAHA ANDA</h4>
+                                    </div>
+
+                                    <!-- Login Form -->
+                                    <form id="loginForm" action="/login" method="POST">
+                                        <p>Silahkan Login Untuk Bergabung</p> 
+
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="form2Example11" name="username" class="form-control"
+                                                placeholder="Phone number or email address" required />
+                                            <label class="form-label" for="form2Example11">Username</label>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="form2Example22" name="password" class="form-control" required />
+                                            <label class="form-label" for="form2Example22">Password</label>
+                                        </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log in</button>
+                                            <a class="text-muted" href="#forgotPasswordModal" data-bs-toggle="modal">Forgot password?</a>
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Don't have an account?</p>
+                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#registerModal">Create new</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+        <h4 class="mb-4">Tentang Partner UMKM (PUMKM)</h4>
+        <p class="small mb-0">
+            Partner UMKM (PUMKM) adalah platform yang dirancang untuk mendukung dan memberdayakan usaha mikro, kecil, dan menengah di Indonesia. Kami berkomitmen untuk membantu para pengusaha lokal dalam mengembangkan bisnis mereka melalui berbagai layanan, termasuk konsultasi, pelatihan, dan akses ke jaringan profesional.
+        </p>
+        <p class="small mb-0">
+            Dengan bekerja sama dengan berbagai mitra strategis, kami bertujuan untuk memberikan solusi inovatif dan praktis yang dapat diimplementasikan untuk meningkatkan efektivitas operasional dan daya saing usaha. PUMKM menyediakan platform yang mudah diakses untuk berbagi informasi, menemukan peluang, dan mendapatkan dukungan yang dibutuhkan untuk mencapai kesuksesan.
+        </p>
+        <p class="small mb-0">
+            Bergabunglah dengan kami untuk memanfaatkan berbagai sumber daya dan jaringan yang tersedia, dan mulailah perjalanan menuju pertumbuhan dan keberhasilan bisnis Anda bersama Partner UMKM.
+        </p>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm" action="/register" method="POST">
+                        <div class="form-outline mb-4">
+                            <input type="text" id="registerName" name="name" class="form-control" placeholder="Full Name" required />
+                            <label class="form-label" for="registerName">Full Name</label>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input type="email" id="registerEmail" name="email" class="form-control" placeholder="Email Address" required />
+                            <label class="form-label" for="registerEmail">Email</label>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input type="password" id="registerPassword" name="password" class="form-control" required />
+                            <label class="form-label" for="registerPassword">Password</label>
+                        </div>
+
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot Password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="forgotPasswordForm" action="/forgot-password" method="POST">
+                        <div class="form-outline mb-4">
+                            <input type="email" id="forgotPasswordEmail" name="email" class="form-control" placeholder="Email Address" required />
+                            <label class="form-label" for="forgotPasswordEmail">Email</label>
+                        </div>
+
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Reset Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const registerForm = document.getElementById('registerForm');
+            const loginForm = document.getElementById('loginForm');
+        
+            // Handle registration
+            registerForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const name = document.getElementById('registerName').value;
+                const email = document.getElementById('registerEmail').value;
+                const password = document.getElementById('registerPassword').value;
+        
+                const response = await fetch('http://localhost:3000/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password })
+                });
+                if (response.ok) {
+                    alert('Registration successful!');
+                    registerForm.reset();
+                } else {
+                    alert('Registration failed!');
+                }
+            });
+        
+            // Handle login
+            loginForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+        
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    localStorage.setItem('token', data.token);
+                    alert('Login successful!');
+                } else {
+                    alert('Invalid email or password!');
+                }
+            });
+        });
+        </script>
+        
+</body>
+</html>
